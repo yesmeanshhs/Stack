@@ -7,7 +7,8 @@ Class.__tostring = function(self)
 	for _, Item in ipairs(self.Data) do
 		table.insert(strings, tostring(Item))
 	end
-	return "Stack, Contents [" .. table.concat(string, ", ") .. "]"
+	
+	return "Stack, Contents: {" .. table.concat(strings, ", ") .. "}"
 end
 
 function Class.new()
