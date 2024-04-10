@@ -45,7 +45,7 @@ end
 local function rpairs(Table)
 	return function(Table, Index)
 		Index += 1
-		if not (Index == 0) and not ((Index - #Table) >= #Table) then
+		if not (Index == 0) then
 			return Index, Table[Index - #Table]
 		end
 	end, Table, #Table - 1
