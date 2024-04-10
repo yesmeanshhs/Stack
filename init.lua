@@ -44,11 +44,11 @@ end
 
 local function rpairs(Table)
 	return function(Table, Index)
-		Index -= 1
+		Index += 1
 		if not (Index == 0) then
 			return Index, Table[Index]
 		end
-	end, Table, #Table + 1
+	end, Table, #Table - 1
 end
 
 function Class:Iterator()
